@@ -7,7 +7,7 @@ const Burger = ({ ingredients }) => {
   let transformedIngredients = Object.keys(ingredients)
     .map((key) => {
       return [...Array(ingredients[key])].map((_, i) => (
-        <BurgerIngredients key={key + 1} type={key} />
+        <BurgerIngredients key={key + i} type={key} />
       ));
     })
     .reduce((acc, curr) => acc.concat(curr), []);
